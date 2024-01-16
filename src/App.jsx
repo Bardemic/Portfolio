@@ -26,7 +26,7 @@ function App() {
         <div className='flex gap-10'>
           <div className='grid grid-rows-5 h-56 bg-blue-600 drop-shadow-lg p-4 text-center gap-4 '>
             <div className='row-span-4 w-32 self-center'>
-              <img src="../public/React.png" alt="" className='w-full'/>
+              <img src="React.png" alt="" className='w-full'/>
             </div>
             <div className='text-2xl'>
               React
@@ -34,7 +34,7 @@ function App() {
           </div>
           <div className='grid grid-rows-5 h-56 bg-blue-600 drop-shadow-lg p-4 text-center gap-4'>
             <div className='row-span-4 w-32 self-center'>
-              <img src="../public/tailwind.png" alt="" className='w-full'/>
+              <img src="tailwind.png" alt="" className='w-full'/>
             </div>
             <div className='text-2xl'>
               Tailwind
@@ -42,7 +42,7 @@ function App() {
           </div>
           <div className='grid grid-rows-5 h-56 bg-blue-600 drop-shadow-lg p-4 text-center gap-4'>
             <div className='row-span-4 w-32 self-center'>
-              <img src="../public/firebase.png" alt="" className='w-full'/>
+              <img src="firebase.png" alt="" className='w-full'/>
             </div>
             <div className='text-2xl'>
               Firebase
