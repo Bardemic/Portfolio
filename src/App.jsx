@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 function App() {
-  const [aboutTextPreview, setAboutTextPreview] = useState(true);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -27,21 +26,21 @@ function App() {
         }}
       />
       <div className='text-white flex flex-col p-5 font-display'>
-        <nav className='flex md:justify-end justify-center pt-7 gap-8 md:pr-12 text-xl sticky top-0 z-10  backdrop-blur-sm'>
+        <nav className='flex md:justify-end justify-center pt-3 md:pt-7 gap-8 md:pr-12 text-xl sticky top-0 z-10 backdrop-blur-sm'>
           <a href="resume_brandon_pieczka.pdf" download className='hover:text-red-500 transition-colors'>Resume</a>
           <a href="#projects" className='hover:text-red-500 transition-colors'>Projects</a>
           <a href="#contact" className='hover:text-red-500 transition-colors'>Contact</a>
         </nav>
         
-        <div className='md:grid md:grid-cols-3 flex flex-col gap-24 pt-24'>
+        <div className='md:grid md:grid-cols-3 flex flex-col gap-24 pt-8 md:pt-24'>
           <div>
-            <header className='md:pl-12  flex flex-col gap-8 pb-12'>
+            <header className='md:pl-12  flex flex-col gap-8 pb-6 md:pb-12'>
               <h1 className='font-bold text-transparent text-center md:text-left bg-clip-text bg-gradient-to-r from-red-500 to-red-700 text-4xl md:text-6xl'>
                 HELLO,<br />I'M BRANDON
               </h1>
             </header>
             <div className='text-center md:max-w-xl md:pl-12 md:text-left gap-12'>
-              <p className='text-xl  text-gray-400'>I'm an 18 year old from Illinois attending Iowa State University, pursuing a Software Engineering degree.</p>
+              <p className='text-xl  text-gray-400'>I'm an 18 year old freshman from Illinois attending Iowa State University, pursuing a Software Engineering degree.</p>
             </div>
             <div className='text-center md:max-w-xl md:pl-12 mt-12 md:text-left gap-12'>
               <p className='text-xl  text-gray-400'>I've coded since before I was in Highschool, and because of that, I've been exposed to many different technologies and languages. Languages and technologies I am experienced with include:</p>
@@ -81,8 +80,8 @@ function App() {
               </ul>
             </div>
           </div>
-          <section id="projects" className='px-12 mb-24 md:col-span-2'>
-            <h2 className='text-6xl font-bold mb-12 text-red-500'>PROJECTS</h2>
+          <section id="projects" className='md:px-12 mb-24 md:col-span-2'>
+            <h2 className='md:text-6xl text-5xl font-bold mb-12 text-center md:text-left text-red-500'>PROJECTS</h2>
             <div className='flex flex-col gap-4'>
               <div className='flex flex-col md:flex-row bg-gray-800 rounded-lg p-2 overflow-hidden'>{/*project1 skrrrr*/}
                 <div className='w-full md:w-1/2 relative overflow-hidden group'>
@@ -93,9 +92,14 @@ function App() {
                 <div className='w-full md:w-1/2 p-8 flex flex-col justify-center'>
                   <div className="flex justify-between items-baseline">
                     <h3 className='text-3xl font-bold text-red-400 mb-4'>Codegram</h3>
-                    <a href="https://github.com/Bardemic/Codegram" target="_blank" className='flex items-center text-lg hover:text-red-400 transition-colors'>
-                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd"></path></svg>
-                    </a>
+                    <div className="flex gap-2">
+                      <a href="https://devpost.com/software/codegram" className='flex items-center text-lg hover:text-red-400 transition-colors' target="_blank">
+                        <svg className='w-5 h-5 mr-2' fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 1.61 0 12.004 6.002 22.39h11.996L24 12.004 17.998 1.61zm1.593 4.084h3.947c3.605 0 6.276 1.695 6.276 6.31 0 4.436-3.21 6.302-6.456 6.302H7.595zm2.517 2.449v7.714h1.241c2.646 0 3.862-1.55 3.862-3.861.009-2.569-1.096-3.853-3.767-3.853z"/></svg>
+                      </a>
+                      <a href="https://github.com/Bardemic/Codegram" target="_blank" className='flex items-center text-lg hover:text-red-400 transition-colors'>
+                        <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd"></path></svg>
+                      </a>
+                    </div>
                   </div>
                   <p className='text-lg mb-4'>
                     Codegram is an all in one tutor matching platform for students. Students get matched with a tutor, and have an IDE shared between the two in a browser. A video call is created in the window, using WebRTC. The tutor is able to request to make changes, and the code runs within the browser. My team and I built this in 24 hours for the Swan Hacks 2024 Hackathon, winning 1st place.
@@ -108,7 +112,7 @@ function App() {
                   <img src="VoiceThief.png" alt="VoiceThief Screenshot" className='w-full h-full object-cover rounded-lg shadow-md' />
                 </div>
                 <div className='w-full md:w-1/2 p-8 flex flex-col justify-center'>
-                  <div className='flex items-baseline justify-between'>
+                  <div className='flex items-baseline md:flex-row flex-row-reverse justify-between'>
                     <a href="https://github.com/Bardemic/VoiceThief" target="_blank" className='flex items-center text-lg hover:text-red-400 transition-colors'>
                       <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd"></path></svg>
                     </a>
@@ -150,7 +154,7 @@ function App() {
 
        
 
-        <section id="contact" className='px-12 mb-24'>
+        <section id="contact" className='md:px-12 px-4 mb-24'>
           <h2 className='text-6xl font-bold mb-12 text-red-500'>CONTACT</h2>
           <div className='bg-gray-800 rounded-lg p-8'>
             <p className='text-xl mb-6'>Have any questions or want to work together? Find me here!</p>
