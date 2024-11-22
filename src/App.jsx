@@ -17,9 +17,6 @@ function App() {
     };
   }, []);
 
-  const handleAboutMe = () => {
-    setAboutTextPreview(!aboutTextPreview);
-  };
 
   return (
     <div className="min-h-screen bg-gray-900">
@@ -30,123 +27,129 @@ function App() {
         }}
       />
       <div className='text-white flex flex-col p-5 font-display'>
-        {/* Navigation */}
-        <nav className='flex justify-end pt-7 gap-8 pr-12 text-xl sticky top-0 z-10  backdrop-blur-sm'>
-          <a href="Resume.pdf" download className='hover:text-red-500 transition-colors'>Resume</a>
+        <nav className='flex md:justify-end justify-center pt-7 gap-8 md:pr-12 text-xl sticky top-0 z-10  backdrop-blur-sm'>
+          <a href="resume_brandon_pieczka.pdf" download className='hover:text-red-500 transition-colors'>Resume</a>
           <a href="#projects" className='hover:text-red-500 transition-colors'>Projects</a>
           <a href="#contact" className='hover:text-red-500 transition-colors'>Contact</a>
         </nav>
         
-        {/* Hero Section */}
-        <header className='text-8xl pl-12 flex flex-col gap-8 pt-24 pb-12'>
-          <h1 className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700'>
-            HELLO,<br />I'M BRANDON
-          </h1>
-        </header>
-
-        {/* About Me Section */}
-        <div className='flex justify-end pr-12 mb-24'>
-          <div 
-            className={`border-2 border-red-500 rounded-full p-8 flex items-center justify-center h-80 w-80 transition-all duration-500 ease-in-out hover:border-red-400 hover:scale-105 cursor-pointer ${aboutTextPreview ? '' : 'bg-red-500 rotate-180'}`}
-            onClick={handleAboutMe}
-          >
-            <div className={`transition-all duration-300 ease-in-out ${aboutTextPreview ? '' : 'rotate-180'}`}>
-              {aboutTextPreview ? 
-                <div className='text-4xl font-semibold text-red-500'>About Me</div>:
-                <p className='text-center text-white'>I'm Brandon, an 18 year old from Illinois attending Iowa State University, pursuing a Software Engineering degree.</p>
-              }
+        <div className='md:grid md:grid-cols-3 flex flex-col gap-24 pt-24'>
+          <div>
+            <header className='md:pl-12  flex flex-col gap-8 pb-12'>
+              <h1 className='font-bold text-transparent text-center md:text-left bg-clip-text bg-gradient-to-r from-red-500 to-red-700 text-4xl md:text-6xl'>
+                HELLO,<br />I'M BRANDON
+              </h1>
+            </header>
+            <div className='text-center md:max-w-xl md:pl-12 md:text-left gap-12'>
+              <p className='text-xl  text-gray-400'>I'm an 18 year old from Illinois attending Iowa State University, pursuing a Software Engineering degree.</p>
+            </div>
+            <div className='text-center md:max-w-xl md:pl-12 mt-12 md:text-left gap-12'>
+              <p className='text-xl  text-gray-400'>I've coded since before I was in Highschool, and because of that, I've been exposed to many different technologies and languages. Languages and technologies I am experienced with include:</p>
+              <ul className='list-disc list-inside text-gray-400 mt-2'>
+                <li>Languages:</li>
+                <ul className='pl-4 list-decimal list-inside text-gray-400'>
+                  <li>Javascript</li>
+                  <li>Python</li>
+                  <li>Typescript</li>
+                  <li>Java</li>
+                  <li>C</li>
+                  <li>Go</li>
+                </ul>
+                <li>Frontend Technologies:</li>
+                <ul className='pl-4 list-decimal list-inside text-gray-400'>
+                  <li>NextJS</li>
+                  <li>TailwindCSS</li>
+                  <li>React</li>
+                  <li>Angular</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+                <li>Backend Technologies:</li>
+                <ul className='pl-4 list-decimal list-inside text-gray-400'>
+                  <li>NodeJS</li>
+                  <li>Express</li>
+                  <li>Flask</li>
+                </ul>
+                <li>Other:</li>
+                <ul className='pl-4 list-decimal list-inside text-gray-400'>
+                  <li>AWS</li>
+                  <li>Google Cloud</li>
+                  <li>Docker</li>
+                  <li>Postman</li>
+                  <li>Git</li>
+                </ul>
+              </ul>
             </div>
           </div>
+          <section id="projects" className='px-12 mb-24 md:col-span-2'>
+            <h2 className='text-6xl font-bold mb-12 text-red-500'>PROJECTS</h2>
+            <div className='flex flex-col gap-4'>
+              <div className='flex flex-col md:flex-row bg-gray-800 rounded-lg p-2 overflow-hidden'>{/*project1 skrrrr*/}
+                <div className='w-full md:w-1/2 relative overflow-hidden group'>
+                  <div className="flex items-center justify-center w-full h-full">
+                    <iframe className='aspect-video w-full rounded-lg' src="https://www.youtube.com/embed/L7Xcb6imDsU?si=trSoDJ14KXG9DNnx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                  </div>
+                </div>
+                <div className='w-full md:w-1/2 p-8 flex flex-col justify-center'>
+                  <div className="flex justify-between items-baseline">
+                    <h3 className='text-3xl font-bold text-red-400 mb-4'>Codegram</h3>
+                    <a href="https://github.com/Bardemic/Codegram" target="_blank" className='flex items-center text-lg hover:text-red-400 transition-colors'>
+                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd"></path></svg>
+                    </a>
+                  </div>
+                  <p className='text-lg mb-4'>
+                    Codegram is an all in one tutor matching platform for students. Students get matched with a tutor, and have an IDE shared between the two in a browser. A video call is created in the window, using WebRTC. The tutor is able to request to make changes, and the code runs within the browser. My team and I built this in 24 hours for the Swan Hacks 2024 Hackathon, winning 1st place.
+                  </p>
+                  {/* <a href="#" className='text-red-500 hover:text-red-400 transition-colors'>Learn More →</a> */}
+                </div>
+              </div>
+              <div className='flex flex-col md:flex-row-reverse bg-gray-800 rounded-lg overflow-hidden'>
+                <div className='w-full md:w-1/2 p-4 flex justify-center items-center gap-4'>
+                  <img src="VoiceThief.png" alt="VoiceThief Screenshot" className='w-full h-full object-cover rounded-lg shadow-md' />
+                </div>
+                <div className='w-full md:w-1/2 p-8 flex flex-col justify-center'>
+                  <div className='flex items-baseline justify-between'>
+                    <a href="https://github.com/Bardemic/VoiceThief" target="_blank" className='flex items-center text-lg hover:text-red-400 transition-colors'>
+                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd"></path></svg>
+                    </a>
+                    <h3 className='text-3xl font-bold text-red-400 mb-4'>VoiceThief</h3>
+                  </div>
+                  <p className='text-lg mb-4'>VoiceThief is a security demonstration tool showcasing voice cloning vulnerabilities in social engineering attacks. It was developed using Flask for the backend, Twilio for the phone call, Google Cloud for live transcription, and Speechify for voice cloning. I built it in 5 hours for the Iowa State 2024 Ivy Hackathon, and won 3rd place.</p>
+                </div>
+              </div>
+              <div className='flex flex-col md:flex-row bg-gray-800 rounded-lg p-2 overflow-hidden'>{/*project1 skrrrr*/}
+                <div className='w-full md:w-1/2 relative overflow-hidden group'>
+                  <div className="relative flex items-center justify-center  ">
+                    <video
+                      className=" aspect-[16/9] h-auto rounded-md shadow-md w-full"
+                      src="video.mp4"
+                      controls
+                      playsInline
+                      poster="videoscreenshot.png"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+                <div className='w-full md:w-1/2 p-8 flex flex-col justify-center'>
+                  <h3 className='text-3xl font-bold text-red-400 mb-4'>AiShorts</h3>
+                  <p className='text-lg mb-4'>
+                    AiShorts is an AI-powered YouTube Shorts generator SaaS product that automates the creation of short-form video content. It is developed using Next.js, TailwindCSS, Node.js, and Supabase. It uses AI providers to generate video ideas, create scripts, and produce final videos, all with just a few clicks.
+                  </p>
+                  {/* <a href="#" className='text-red-500 hover:text-red-400 transition-colors'>Learn More →</a> */}
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
+
         
-        {/* Technologies Section */}
-        <section className='flex flex-col items-center gap-12 mb-24'>
-          <h2 className='text-5xl font-bold text-red-500'>TECHNOLOGIES</h2>
-          <div className='flex gap-10 flex-wrap justify-center'>
-            {['NextJS', 'Typescript', 'NodeJS', 'Python', 'Tailwind', 'Java', 'C', 'Docker', 'Postman', 'AWS',].map((tech) => (
-              <div key={tech} className='group bg-gray-800 rounded-lg shadow-lg p-6 text-center transition-all duration-300 ease-in-out hover:bg-gray-700 hover:scale-105'>
-                <div className='w-32 h-32 mx-auto mb-4'>
-                  <img src={`${tech.toLowerCase()}.png`} alt={tech} className='w-full h-full object-contain'/>
-                </div>
-                <div className='text-2xl font-semibold text-red-400 group-hover:text-red-500'>
-                  {tech}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
 
-        {/* Projects Section */}
-        <section id="projects" className='px-12 mb-24'>
-          <h2 className='text-6xl font-bold mb-12 text-red-500'>PROJECTS</h2>
-          <div className='flex flex-col gap-16'>
-            {/* Project 1 */}
-            <div className='flex flex-col md:flex-row bg-gray-800 rounded-lg overflow-hidden'>
-              <div className='w-full md:w-1/2 h-96 md:h-auto relative overflow-hidden group'>
-                <div className="relative flex items-center justify-center  ">
-                  <video
-                    className=" aspect-[9/16] h-auto rounded-md shadow-md w-56 pb-2"
-                    src="video.mp4"
-                    controls
-                    playsInline
-                    poster="videoscreenshot.png"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                  <span className="absolute left-2 top-1 m-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
-                    (example video)
-                  </span>
-                </div>
-              </div>
-              <div className='w-full md:w-1/2 p-8 flex flex-col justify-center'>
-                <h3 className='text-3xl font-bold text-red-400 mb-4'>AiShorts</h3>
-                <p className='text-lg mb-4'>
-                  AiShorts is an AI-powered YouTube Shorts generator SaaS product that automates the creation of short-form video content. It is developed using Next.js, TailwindCSS, Node.js, and Supabase. It uses AI providers to generate video ideas, create scripts, and produce final videos, all with just a few clicks. 
-                </p>
-                {/* <a href="#" className='text-red-500 hover:text-red-400 transition-colors'>Learn More →</a> */}
-              </div>
-            </div>
+        
 
-            {/* Project 2 */}
-            <div className='flex flex-col md:flex-row-reverse bg-gray-800 rounded-lg overflow-hidden'>
-              <div className='w-full md:w-1/2 p-4 flex justify-center items-center gap-4'>
-                <motion.div
-                  className='w-1/2 h-96 relative overflow-hidden rounded-lg shadow-md'
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <motion.img 
-                    src="StayConnected.png" 
-                    alt="Stay Connected Screenshot 1" 
-                    className='absolute top-0 left-0 w-full h-full object-cover'
-                    whileHover={{ objectFit: 'contain' }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </motion.div>
-                <motion.div
-                  className='w-1/2 h-96 relative overflow-hidden rounded-lg shadow-md'
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <motion.img 
-                    src="StayConnected2.png" 
-                    alt="Stay Connected Screenshot 2" 
-                    className='absolute top-0 left-0 w-full h-full object-cover'
-                    whileHover={{ objectFit: 'contain' }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </motion.div>
-              </div>
-              <div className='w-full md:w-1/2 p-8 flex flex-col justify-center'>
-                <h3 className='text-3xl font-bold text-red-400 mb-4'>Stay Connected</h3>
-                <p className='text-lg mb-4'>Stay Connected is a React Native app that allows you to stay connected with your friends and family. It is developed using React Native/Expo and Supabase. Users can post photos on their page, and keep up with posts from others.</p>
-                {/* <a href="#" className='text-red-500 hover:text-red-400 transition-colors'>Learn More →</a> */}
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Contact Section */}
+       
+
         <section id="contact" className='px-12 mb-24'>
           <h2 className='text-6xl font-bold mb-12 text-red-500'>CONTACT</h2>
           <div className='bg-gray-800 rounded-lg p-8'>
