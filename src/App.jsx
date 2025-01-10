@@ -27,7 +27,7 @@ function App() {
       />
       <div className='text-white flex flex-col p-5 font-display'>
         <nav className='flex md:justify-end justify-center pt-3 md:pt-7 gap-8 md:pr-12 text-xl sticky top-0 z-10 backdrop-blur-sm'>
-          <a href="resume_brandon_pieczka.pdf" download className='hover:text-red-500 transition-colors'>Resume</a>
+          <a href="https://drive.google.com/file/d/1iSSX7-UJeJjRWkFMY77Vnq8HVTOySQGS/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-red-500 transition-colors'>Resume</a>
           <a href="#projects" className='hover:text-red-500 transition-colors'>Projects</a>
           <a href="#contact" className='hover:text-red-500 transition-colors'>Contact</a>
         </nav>
