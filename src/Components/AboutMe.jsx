@@ -3,7 +3,7 @@ import SlideIn from "./SlideIn";
 
 export default function AboutMe() {
     return (
-        <div className="flex flex-col pb-40 text-slate-100">
+        <div id='AboutMe' className="flex flex-col pt-12 pb-40 text-slate-100">
             <HeaderWithBackground title={'About Me!'} length={5}/>
             <div className="grid grid-cols-1 gap-32 md:grid-cols-2 items-start">
                 <SlideIn>

@@ -4,7 +4,7 @@ import SlideIn from "./SlideIn";
 
 export default function ExperienceSection() {
     return (
-        <div>
+        <div id='Experience' className="pb-16">
             <HeaderWithBackground title={'Experience'} length={5}/>
             <div className="grid grid-cols-2 gap-8">
                 <SlideIn>

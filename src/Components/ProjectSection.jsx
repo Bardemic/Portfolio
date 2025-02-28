@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard"
 import SlideIn from "./SlideIn"
 export default function ProjectSection() {
     return (
-        <div className="flex flex-col">
+        <div id='Projects' className="flex flex-col pt-16">
             <HeaderWithBackground title={'Projects'} length={4}/>
             <div className='mainContainer grid gap-8 grid-cols-1 md:grid-cols-2 w-full'>
                 <SlideIn>

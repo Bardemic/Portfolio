@@ -33,6 +33,19 @@ export default function Bar({mousePos}) {
     }, []);
 
 
+    const aboutDiv = document.getElementById('AboutMe')
+    const scrollIntoAbout = () => aboutDiv.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
+
+    const experienceDiv = document.getElementById('Experience')
+    const scrollIntoExperience = () => experienceDiv.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
+
+    const projectsDiv = document.getElementById('Projects')
+    const scrollIntoProjects = () => projectsDiv.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
+
+    const contactMeDiv = document.getElementById('ContactMe')
+    const scrollIntoContact = () => contactMeDiv.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
+
+
 
 
     function mouseDownFunc() {
@@ -45,19 +58,30 @@ export default function Bar({mousePos}) {
         })
     }
     return (
-            <div>
-                <div className="rounded-xl m-4 flex flex-col bg-neutral-900 gap-2 items-center text-stone-100 outline outline-blue-500 p-4 text-sm transition delay-150 duration-300 fixed" style={{right: `${curPosition.x}px`, top: `${curPosition.y}px`, MozUserSelect: 'none', userSelect: 'none'}}>
-                    <p>About Me</p>
-                    <p>Projects</p>
-                    <p>Experience</p>
-                    <p>Resume</p>
-                    <p>Contact Me</p>
-                    <div onPointerDown={mouseDownFunc} className="flex flex-col gap-1 p-1 transition delay-150 duration-300 hover:cursor-grab">
-                        <div className="h-0.5 bg-black w-24" />
-                        <div className="pt-0.5 bg-black w-24" />
-                    </div>
+        <div className="rounded-xl m-4 flex flex-col bg-opacity-75 bg-neutral-900 gap-2 items-center text-stone-100 outline outline-blue-500 px-4 p-2 text-sm transition delay-150 duration-300 fixed" style={{right: `${curPosition.x}px`, top: `${curPosition.y}px`, MozUserSelect: 'none', userSelect: 'none'}}>
+            <p onClick={scrollIntoAbout} className="hover:scale-125 hover:text-blue-300 transition duration-150">About Me</p>
+            <p onClick={scrollIntoExperience} className="hover:scale-125 hover:text-green-300 transition duration-150">Experience</p>
+            <p onClick={scrollIntoProjects} className="hover:scale-125 hover:text-red-300 transition duration-150">Projects</p>
+            <p onClick={scrollIntoContact} className="hover:scale-125 transition duration-150">Contact Me</p>
+            <p className="hover:scale-125 transition duration-150">Resume</p>
+            <div onPointerDown={mouseDownFunc} className="flex flex-col gap-1 p-1 transition delay-150 duration-300 hover:cursor-grab">
+                <div className="grid grid-cols-6 gap-1 place-items-center hover:scale-125 transition duration-150">
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    <div className="rounded-full bg-blue-500 w-2 h-2" />
+                    
                 </div>
             </div>
+        </div>
     )
 
 }

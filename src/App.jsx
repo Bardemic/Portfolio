@@ -6,6 +6,7 @@ import Bar from './Components/Bar';
 import AboutMe from './Components/AboutMe';
 import ProjectSection from './Components/ProjectSection';
 import ExperienceSection from './Components/ExperienceSection';
+import ContactSection from './Components/ContactSection';
 
 
 export default function App() {
@@ -37,6 +38,7 @@ export default function App() {
                 <AboutMe/>
                 <ExperienceSection/>
                 <ProjectSection/>
+                <ContactSection/>
             </div>
             <Bar mousePos={mousePosition}/>
             
