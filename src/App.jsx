@@ -7,9 +7,12 @@ import AboutMe from './Components/AboutMe';
 import ProjectSection from './Components/ProjectSection';
 import ExperienceSection from './Components/ExperienceSection';
 import ContactSection from './Components/ContactSection';
+import MobileBad from './Components/MobileBad';
 
 
 export default function App() {
+
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     
@@ -34,6 +37,7 @@ export default function App() {
                 }}
             />
             <div className="flex flex-col gap-12">
+                {isMobileDevice && <MobileBad/>}
                 <Intro/>
                 <AboutMe/>
                 <ExperienceSection/>
