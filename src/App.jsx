@@ -8,6 +8,7 @@ import ProjectSection from './Components/ProjectSection';
 import ExperienceSection from './Components/ExperienceSection';
 import ContactSection from './Components/ContactSection';
 import MobileBad from './Components/MobileBad';
+import Footer from './Components/Footer';
 
 
 export default function App() {
@@ -29,7 +30,7 @@ export default function App() {
       }, []);
 
     return (
-        <div className="min-h-screen bg-neutral-900 pb-20 px-56">
+        <div className="min-h-screen bg-neutral-900 w-screen">
             <motion.div
                 className="mouse-effect"
                 animate={{
@@ -45,6 +46,7 @@ export default function App() {
                 <ContactSection/>
             </div>
             <Bar mousePos={mousePosition}/>
+            <Footer/>
             
 
         </div>
