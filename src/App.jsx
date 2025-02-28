@@ -9,6 +9,7 @@ import ExperienceSection from './Components/ExperienceSection';
 import ContactSection from './Components/ContactSection';
 import MobileBad from './Components/MobileBad';
 import Footer from './Components/Footer';
+import MobileHeader from './Components/MobileHeader';
 
 
 export default function App() {
@@ -38,14 +39,13 @@ export default function App() {
                 }}
             />
             <div className="flex flex-col gap-12">
-                {isMobileDevice && <MobileBad/>}
                 <Intro/>
                 <AboutMe/>
                 <ExperienceSection/>
                 <ProjectSection/>
                 <ContactSection/>
             </div>
-            <Bar mousePos={mousePosition}/>
+            {isMobileDevice ? <MobileHeader/> : <Bar mousePos={mousePosition}/>}
             <Footer/>
             
 

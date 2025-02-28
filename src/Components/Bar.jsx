@@ -62,7 +62,7 @@ export default function Bar({mousePos}) {
             <p onClick={scrollIntoAbout} className="hover:scale-125 hover:text-blue-300 transition duration-150">About Me</p>
             <p onClick={scrollIntoExperience} className="hover:scale-125 hover:text-green-300 transition duration-150">Experience</p>
             <p onClick={scrollIntoProjects} className="hover:scale-125 hover:text-red-300 transition duration-150">Projects</p>
-            <p onClick={scrollIntoContact} className="hover:scale-125 transition duration-150">Contact Me</p>
+            <p onClick={scrollIntoContact} className="hover:scale-125 hover:text-yellow-300 transition duration-150">Contact Me</p>
             <p className="hover:scale-125 transition duration-150">Resume</p>
             <div onPointerDown={mouseDownFunc} className="flex flex-col gap-1 p-1 transition delay-150 duration-300 hover:cursor-grab">
                 <div className="grid grid-cols-6 gap-1 place-items-center hover:scale-125 transition duration-150">
