@@ -2,7 +2,7 @@ import HeaderWithBackground from "./HeaderWithBackground";
 
 export default function ContactSection() {
     return (
-        <div id='ContactMe' className="flex flex-col gap-8 pt-8 md:gap-16 px-20 pb-12 lg:px-32 xl:px-56">
+        <div id='ContactMe' className="flex flex-col gap-8 pt-8 md:gap-16 px-12 pb-12 lg:px-32 xl:px-56">
             <HeaderWithBackground title={'Contact Me'} length={5.5} />
             <h2 className="text-slate-100 text-center text-3xl">Find me here!</h2>
             <div className="flex justify-center gap-6 md:scale-100 md:gap-24">
