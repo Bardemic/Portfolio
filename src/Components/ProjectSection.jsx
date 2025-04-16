@@ -7,10 +7,13 @@ export default function ProjectSection() {
             <HeaderWithBackground title={'Projects'} length={4}/>
             <div className='mainContainer grid gap-8 grid-cols-1 md:grid-cols-2 w-full'>
                 <SlideIn>
-                    <ProjectCard imageLink={'Codegram.png'} text={'Codegram'}/>
+                    <ProjectCard imageLink={'websketch.png'} link={'https://devpost.com/software/untitledproject'} text={'Websketch'}/>
                 </SlideIn>
                 <SlideIn>
-                    <ProjectCard imageLink={'VoiceThief.png'} text={'VoiceThief'}/>
+                    <ProjectCard imageLink={'Codegram.png'} link={'https://devpost.com/software/codegram'} text={'Codegram'}/>
+                </SlideIn>
+                <SlideIn>
+                    <ProjectCard imageLink={'VoiceThief.png'} text={'VoiceThief'} link={'https://voicethief.bardemic.xyz'} />
                 </SlideIn>
             </div>
         </div>
