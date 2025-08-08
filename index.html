@@ -2,15 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brandon's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brandon Pieczka — Portfolio</title>
+    <link rel="icon" href="public/link.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="src/main.jsx"></script>
+  <body class="home">
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div>
+            <h1>Brandon Pieczka</h1>
+            <p class="lede">Software Engineering student @ Iowa State University.</p>
+          </div>
+          <img class="avatar" src="public/MeAndDog.JPG" alt="Brandon" />
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About Me</h2>
+          <p>Hi! I'm Brandon, a 19 year old Software Engineering student at Iowa State University with a minor in Artificial Intelligence. I've been developing software since I was a kid, and have always had a passion to build and try out new things. When I'm not at the computer, I like to play Soccer and workout.</p>
+
+          <h3 id="experience">Experience</h3>
+          <ul class="list">
+            <li><span class="company">Olive (YC W25)</span> — Software Engineer Intern — May 2025 - Current</li>
+            <li><span class="company">John Deere</span> — Software Engineer Intern — Jan 2025 - May 2025</li>
+          </ul>
+
+          <h3 id="projects">Projects</h3>
+          <ul class="list">
+            <li><a href="https://hedji.com/" target="_blank"><strong>Hedji</strong></a> — Beat the prediction market with live data.</li>
+            <li><a href="https://github.com/Bardemic/SketchReact" target="_blank"><strong>Websketch</strong></a> — Turn your sketches into websites.</li>
+            <li><a href="https://github.com/bardemic/codegram" target="_blank"><strong>Codegram</strong></a> — Connect tutors with students with live code sharing, as well as video and audio chat.</li>
+            <li><a href="https://github.com/Bardemic/VoiceThief" target="_blank"><strong>VoiceThief</strong></a> — Clone voices over the phone to make people aware of new dangers from AI.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>
+            <a href="https://linkedin.com/in/brandonpieczka/" target="_blank" rel="noreferrer">LinkedIn</a>
+            · <a href="https://github.com/bardemic" target="_blank" rel="noreferrer">GitHub</a>
+            · <a href="mailto:brandonpieczka@gmail.com">Email</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+
   </body>
 </html>

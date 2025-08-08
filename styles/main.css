@@ -1,0 +1,154 @@
+/* Minimal base */
+:root {
+  --bg: #0e1116;         /* slightly bluish-dark */
+  --text: #e6edf3;       /* soft light */
+  --muted: #9fb1c1;      /* cool muted */
+  --border: #1f2833;     /* darker border */
+  --accent: #58a6ff;     /* soft blue */
+  --hover-accent: #b3cbeb; /* subtler hover blue */
+  --link-underline: #5f6c7a; /* between border and muted */
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Jost", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  line-height: 1.6;
+}
+
+/* Center the home page vertically and horizontally */
+.home main {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img { max-width: 90%; display: block; margin-top: 10px; margin-bottom: 10px; }
+
+.container { width: min(820px, 92%); margin: 0 auto; }
+
+/* Header */
+.site-header { border-bottom: 1px solid var(--border); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.brand { font-weight: 700; }
+.nav a { margin-left: 14px; color: var(--muted); }
+.nav a:hover { color: var(--text); text-decoration: underline; }
+
+/* Sections */
+.section { padding: 16px 0; }
+.section h2 { font-size: 20px; margin: 0 0 8px; }
+.section h3 { font-size: 18px; margin: 12px 0 8px; }
+.section p { margin: 8px 0; }
+
+/* Hero */
+.hero { padding: 20px 0 6px; }
+.hero h1 { font-size: clamp(28px, 6vw, 36px); margin: 0 0 4px; }
+.lede { color: var(--muted); margin: 0; font-size: 0.95rem; }
+.hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  background-color: #0b0f14;
+  transition: border-color 150ms ease;
+}
+.avatar:hover,
+.avatar:focus-visible {
+  border-color: var(--accent);
+}
+
+/* Lists */
+.list { padding-left: 1rem; margin: 0; }
+.list li { margin: 4px 0; }
+.muted { color: var(--muted); }
+
+/* Bold emphasis */
+strong {
+  font-weight: 700;
+  color: #fff; /* slightly brighter for contrast */
+  letter-spacing: 0.2px; /* was 0.1px */
+  font-size: 1.02em; /* tiny size bump for readability */
+}
+
+/* Links */
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline); /* between border and muted */
+  text-underline-offset: 3px; /* slightly smaller */
+  text-decoration-thickness: 1.5px; /* slightly smaller */
+  transition: color 120ms ease, text-decoration-color 120ms ease; /* tiny color animation */
+}
+/* Ensure nested elements (e.g., strong, spans) inside links keep the underline */
+a * {
+  color: inherit;
+  text-decoration: inherit;
+  text-decoration-color: inherit;
+  text-underline-offset: inherit;
+  text-decoration-thickness: inherit;
+}
+/* Improve bold-in-link legibility: keep underline but push it farther from glyphs */
+a strong {
+  text-decoration: underline;
+  text-underline-offset: 5px; /* +1px offset */
+  text-decoration-thickness: 2px;
+}
+a:hover,
+a:focus-visible {
+  color: var(--hover-accent);
+  /* keep underline color constant for consistency across visited/unvisited */
+  text-underline-offset: 3px; /* no movement on hover */
+  text-decoration-thickness: 1.5px; /* no thickness change on hover */
+}
+a:visited {
+  color: var(--text);
+  text-decoration-color: var(--link-underline);
+}
+
+/* Keep nav links the same even after visiting */
+.nav a:visited { color: var(--muted); }
+
+/* Nav link presentation */
+.nav a { text-decoration: none; }
+.nav a:hover,
+.nav a:focus-visible {
+  color: var(--hover-accent);
+  text-decoration: underline;
+  /* keep underline color constant for consistency across visited/unvisited */
+  text-underline-offset: 3px; /* slightly smaller */
+  text-decoration-thickness: 2px; /* reduced from 3px */
+}
+
+/* Article (blog + project details) */
+.article { max-width: 720px; margin: 0 auto; }
+.article h1 { font-size: clamp(26px, 5vw, 34px); margin-bottom: 4px; }
+.article .meta { color: var(--muted); margin-bottom: 10px; }
+.article p { margin: 8px 0; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); padding: 14px 0; color: var(--muted); } 
+
+/* Contact links: enforce consistent underline */
+#contact a,
+#contact a:visited {
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+#contact a:hover,
+#contact a:focus-visible {
+  color: var(--hover-accent);
+} 
+
+/* Experience company names */
+.company {
+  font-weight: 600;
+} 

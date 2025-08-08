@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "id": "hedji",
+      "name": "Hedji",
+      "description": "Beat the prediction market.",
+      "htmlFile": "hedji.html",
+      "icon": "../public/link.svg"
+    },
+    {
+      "id": "websketch",
+      "name": "Websketch",
+      "description": "Collaborative web sketching tool.",
+      "htmlFile": "websketch.html",
+      "icon": "../public/websketch.png"
+    },
+    {
+      "id": "codegram",
+      "name": "Codegram", 
+      "description": "Share code snippets as clean images.",
+      "htmlFile": "codegram.html",
+      "icon": "../public/Codegram.png"
+    },
+    {
+      "id": "voicethief",
+      "name": "VoiceThief",
+      "description": "Small experiments with voice + AI.",
+      "htmlFile": "voicethief.html",
+      "icon": "../public/VoiceThief.png"
+    }
+  ]
+} 
