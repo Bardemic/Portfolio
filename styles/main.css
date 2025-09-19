@@ -24,7 +24,7 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 img { max-width: 90%; display: block; margin-top: 10px; margin-bottom: 10px; }
@@ -67,6 +67,26 @@ img { max-width: 90%; display: block; margin-top: 10px; margin-bottom: 10px; }
 /* Lists */
 .list { padding-left: 1rem; margin: 0; }
 .list li { margin: 4px 0; }
+.item { list-style: none; padding-left: 0; margin: 8px 0; }
+.item-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.toggle {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.toggle:hover,
+.toggle:focus-visible { color: var(--hover-accent); border-color: var(--hover-accent); }
+.chevron { width: 18px; height: 18px; transition: transform 160ms ease; }
+.toggle[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+.item-desc { margin: 6px 0 8px 0; padding-left: 0; color: var(--muted); }
 .muted { color: var(--muted); }
 
 /* Bold emphasis */

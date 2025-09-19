@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Brandon Pieczka — Portfolio</title>
-    <link rel="icon" href="public/link.svg" />
+    <link rel="icon" href="public/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -29,16 +29,87 @@
 
           <h3 id="experience">Experience</h3>
           <ul class="list">
-            <li><span class="company">Olive (YC W25)</span> — Software Engineer Intern — May 2025 - Current</li>
-            <li><span class="company">John Deere</span> — Software Engineer Intern — Jan 2025 - May 2025</li>
+            <li class="item">
+              <div class="item-row">
+                <span><span class="company">Olive (YC W25)</span> — Software Engineer Intern — May 2025 - August 2025</span>
+                <button class="toggle" aria-expanded="false" aria-controls="exp-olive" title="Show description">
+                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
+                </button>
+              </div>
+              <div id="exp-olive" class="item-desc" hidden>
+                <p>As the first hire at Olive, I spent the summer working on new features nearly daily, with a total of over 20 features, as well as many bug fixes, improvements to the AI agent pipeline, and more. I'd be teaching myself new technologies for many of these features, and collaborating with the founders to figure out the best way to implement them.</p>
+              </div>
+            </li>
+            <li class="item">
+              <div class="item-row">
+                <span><span class="company">John Deere</span> — Software Engineer Intern — Jan 2025 - May 2025</span>
+                <button class="toggle" aria-expanded="false" aria-controls="exp-deere" title="Show description">
+                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
+                </button>
+              </div>
+              <div id="exp-deere" class="item-desc" hidden>
+                <p>Worked on the Order Management team, upgrading many websites from legacy component libraries to modern ones. Also worked on an internal tool to help keep track of the progress across 30+ repositories.</p>
+              </div>
+            </li>
           </ul>
 
           <h3 id="projects">Projects</h3>
           <ul class="list">
-            <li><a href="https://hedji.com/" target="_blank"><strong>Hedji</strong></a> — Beat the prediction market with live data.</li>
-            <li><a href="https://github.com/Bardemic/SketchReact" target="_blank"><strong>Websketch</strong></a> — Turn your sketches into websites.</li>
-            <li><a href="https://github.com/bardemic/codegram" target="_blank"><strong>Codegram</strong></a> — Connect tutors with students with live code sharing, as well as video and audio chat.</li>
-            <li><a href="https://github.com/Bardemic/VoiceThief" target="_blank"><strong>VoiceThief</strong></a> — Clone voices over the phone to make people aware of new dangers from AI.</li>
+            <li class="item">
+              <div class="item-row">
+                <span><a href="https://bardemic.com" target="_blank"><strong>Emploive</strong></a> — The ultimate job scraper (launching ~09/24/2025).</span>
+                <button class="toggle" aria-expanded="false" aria-controls="proj-emploive" title="Show description">
+                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
+                </button>
+              </div>
+              <div id="proj-emploive" class="item-desc" hidden>
+                <p>Emploive lets users create trackers for job listings, and can choose to be notified via email or text the moment a new job comes out. Supports over 1000 companies, currently has over 70,000 jobs in the database, and is by far the fastest at scraping and notifying users compared to any alternative on the market (has notified early testers about internships at OpenAI, Ramp, Google, Figma, Notion, and more less than 2 minutes after being posted on the careers pages).</p>
+              </div>
+            </li>
+            <li class="item">
+              <div class="item-row">
+                <span><a href="https://hedji.com/" target="_blank"><strong>Hedji</strong></a> — Beat the prediction market with live data.</span>
+                <button class="toggle" aria-expanded="false" aria-controls="proj-hedji" title="Show description">
+                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
+                </button>
+              </div>
+              <div id="proj-hedji" class="item-desc" hidden>
+                <p>Hedji compiles different live data sources such as tweets, live streams, etc, and automatically places bets when certain conditions and criteria are met (currently an abandoned project, will pick back up eventually).</p>
+              </div>
+            </li>
+            <li class="item">
+              <div class="item-row">
+                <span><a href="https://github.com/Bardemic/SketchReact" target="_blank"><strong>Websketch</strong></a> — Turn your sketches into websites.</span>
+                <button class="toggle" aria-expanded="false" aria-controls="proj-websketch" title="Show description">
+                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
+                </button>
+              </div>
+              <div id="proj-websketch" class="item-desc" hidden>
+                <p>Websketch lets users draw out a UI/website on a canvas, and uses AI agents to convert the drawings to a website, with another agent to allow users to make further modifications, add APIs, etc. Built in 24 hours for WildHacks 2025, winning best in category. (I also built an eval tool to allow experiments such as different prompts, downscaling the image before passing to an LLM, etc, but that’s separate from the hackathon)</p>
+              </div>
+            </li>
+            <li class="item">
+              <div class="item-row">
+                <span><a href="https://github.com/Bardemic/VoiceThief" target="_blank"><strong>VoiceThief</strong></a> — Clone voices over the phone to make people aware of new dangers from AI.</span>
+                <button class="toggle" aria-expanded="false" aria-controls="proj-voicethief" title="Show description">
+                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
+                </button>
+              </div>
+              <div id="proj-voicethief" class="item-desc" hidden>
+                <p>VoiceThief was built for Iowa State’s College of Business Ivy Hackathon in 4 hours by just me, and lets people help educate those around them about potential new phishing attempts involving generative voice LLMs. VoiceThief calls users, and after initiating a short conversation, clones the user’s voice, and starts impersonating the user to themselves. Won third place.</p>
+              </div>
+            </li>
+            <li class="item">
+              <div class="item-row">
+                <span><a href="https://github.com/bardemic/codegram" target="_blank"><strong>Codegram</strong></a> — Connect tutors with students with live code sharing, as well as video and audio chat.</span>
+                <button class="toggle" aria-expanded="false" aria-controls="proj-codegram" title="Show description">
+                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
+                </button>
+              </div>
+              <div id="proj-codegram" class="item-desc" hidden>
+                <p>Codegram pairs students seeking help with their code with tutors, allowing tutors to edit the student’s code live, as well as run the code and see the output & errors. It also utilizes WebRTC to enable a video and audio stream between the student and tutor. Built in 24 hours for SwanHacks 2024, winning 1st overall.</p>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
@@ -49,12 +120,31 @@
           <p>
             <a href="https://linkedin.com/in/brandonpieczka/" target="_blank" rel="noreferrer">LinkedIn</a>
             · <a href="https://github.com/bardemic" target="_blank" rel="noreferrer">GitHub</a>
+            · <a href="https://x.com/DemicLive" target="_blank" rel="noreferrer">Twitter</a>
             · <a href="mailto:brandonpieczka@gmail.com">Email</a>
           </p>
         </div>
       </section>
     </main>
 
-
+    <script>
+      (function() {
+        const toggles = document.querySelectorAll('.toggle');
+        toggles.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const controlsId = btn.getAttribute('aria-controls');
+            const panel = document.getElementById(controlsId);
+            if (!panel) return;
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!expanded));
+            if (expanded) {
+              panel.hidden = true;
+            } else {
+              panel.hidden = false;
+            }
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
