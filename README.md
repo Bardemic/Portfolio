@@ -12,7 +12,7 @@ This repository contains a simple, fast portfolio and blog built with plain HTML
 
 ## Development
 
-Open `index.html` directly in a browser or serve the folder with any static server (e.g. VS Code Live Server).
+Open `index.html` directly in a browser or serve the folder with any static server (e.g. VS Code Live Server). test
 
 ## Add a blog post
 
