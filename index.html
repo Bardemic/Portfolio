@@ -3,266 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Brandon Pieczka — software engineer building agents, tools, and infrastructure." />
     <title>Brandon Pieczka — Portfolio</title>
     <link rel="icon" href="public/favicon.svg?v=2" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css?v=9" />
+    <link rel="stylesheet" href="styles/index.css?v=1" />
   </head>
-  <body class="home">
+  <body>
     <main>
-      <section id="top" class="hero">
-        <div class="container hero-inner">
-          <div class="hero-copy">
-            <h1>Brandon Pieczka</h1>
-            <div class="contact-links">
-              <a href="https://github.com/bardemic" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="https://linkedin.com/in/brandonpieczka/" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="https://x.com/DemicLive" target="_blank" rel="noreferrer">Twitter</a>
-              <button id="email-copy" class="contact-email" type="button" aria-live="polite">Email</button>
-            </div>
-          </div>
-          <div class="portrait-wrap">
-            <img class="avatar" src="public/MeAndDog.JPG" alt="Brandon Pieczka with his dog" />
-          </div>
-        </div>
+      <header>
+        <h1>Brandon Pieczka</h1>
+        <p class="intro">Building agents, tools, and infrastructure.</p>
+        <nav aria-label="Contact">
+          <a href="https://github.com/bardemic">GitHub <svg class="external-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10" /></svg></a>
+          <a href="https://linkedin.com/in/brandonpieczka/">LinkedIn <svg class="external-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10" /></svg></a>
+          <a href="mailto:brandonpieczka@gmail.com">Email <svg class="external-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10" /></svg></a>
+        </nav>
+      </header>
+
+      <section aria-labelledby="experience">
+        <h2 id="experience">Experience</h2>
+        <ul class="experience-list">
+          <li class="row">
+            <span class="name">Pinterest</span>
+            <span class="role">Software Engineer Intern</span>
+            <span class="year">2026</span>
+          </li>
+          <li class="row">
+            <span class="name">Bud</span>
+            <span class="role">Software Engineer Intern</span>
+            <span class="year">2026</span>
+          </li>
+          <li class="row">
+            <span class="name">Olive</span>
+            <span class="role">Software Engineer Intern</span>
+            <span class="year">2025</span>
+          </li>
+          <li class="row">
+            <span class="name">John Deere</span>
+            <span class="role">Software Engineer Intern</span>
+            <span class="year">2025</span>
+          </li>
+        </ul>
       </section>
 
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <h2>About Me</h2>
-            <p class="about-copy">Hi! I'm Brandon, a 20 year old Software Engineering student in my final year at Iowa State University with a minor in Artificial Intelligence. I enjoy building practical software around AI agents, developer tools, infrastructure, and automation. I was previously a Software Engineering Peer Mentor, as well as a member of both the Hackathon Club and the Computer Science &amp; Software Engineering Club.</p>
-          </div>
-
-          <div class="work-grid">
-            <div class="work-column">
-          <h3 id="experience">Experience</h3>
-          <ul class="list">
-            <li class="item">
-              <div class="item-row">
-                <span><span class="company">Pinterest</span> — Software Engineer Intern — May 2026 - Present</span>
-                <button class="toggle" aria-expanded="false" aria-controls="exp-pinterest" title="Show description">
-                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
-                </button>
-              </div>
-              <div id="exp-pinterest" class="item-desc" aria-hidden="true">
-                <div class="item-desc-inner">
-                  <p>Created an LLM agent that searches GitHub repositories and Jira tickets to generate business context for Snowflake tables, improving discovery across 14,000+ tables and 100,000 columns. Also developed a desktop AI agent platform connecting Codex and Claude Code to internal Pinterest services.</p>
-                  <p class="tech-line"><em>Python, Snowflake, AWS S3, TypeScript, Fivetran, LangGraph, Apache Airflow, Electron, SQLite</em></p>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <div class="item-row">
-                <span><span class="company">Bud (YC W25, acquired by Figma)</span> — Software Engineer Intern — Jan 2026 - May 2026</span>
-                <button class="toggle" aria-expanded="false" aria-controls="exp-bud" title="Show description">
-                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
-                </button>
-              </div>
-              <div id="exp-bud" class="item-desc" aria-hidden="true">
-                <div class="item-desc-inner">
-                  <p>Engineered features used by 1,000,000+ users as one of the first seven engineers, including mobile app generation support, improved LLM performance tracking, and a general-use agent for iMessage and Telegram. Delivered improvements to the core agent, which placed first in several UI-focused coding agent benchmarks.</p>
-                  <p class="tech-line"><em>TypeScript, Next.js, React Native, Express, Expo, Electron, Redis, Google Cloud, Puppeteer</em></p>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <div class="item-row">
-                <span><span class="company">Olive (YC W25)</span> — Software Engineer Intern — May 2025 - Aug 2025</span>
-                <button class="toggle" aria-expanded="false" aria-controls="exp-olive" title="Show description">
-                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
-                </button>
-              </div>
-              <div id="exp-olive" class="item-desc" aria-hidden="true">
-                <div class="item-desc-inner">
-                  <p>Delivered 20+ features as the first engineer, expanding database support and improving the core AI agent pipeline to achieve 30% faster generations, 80% fewer SQL errors, and 30% fewer deployment errors across 5,000+ apps.</p>
-                  <p class="tech-line"><em>TypeScript, React, Express, PostgreSQL, TanStack, tRPC, ClickHouse, MongoDB, MySQL</em></p>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <div class="item-row">
-                <span><span class="company">John Deere</span> — Software Engineer Intern — Jan 2025 - May 2025</span>
-                <button class="toggle" aria-expanded="false" aria-controls="exp-deere" title="Show description">
-                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
-                </button>
-              </div>
-              <div id="exp-deere" class="item-desc" aria-hidden="true">
-                <div class="item-desc-inner">
-                  <p>Collaborated to build an internal tool tracking deprecated components across 100+ repositories, using AWS services and an interactive UI to provide observability to engineers and managers.</p>
-                  <p class="tech-line"><em>TypeScript, React, Java, Express, AWS, DynamoDB</em></p>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <div class="item-row">
-                <span><span class="company">Emploive</span> — Founder — Aug 2025 - Present</span>
-                <button class="toggle" aria-expanded="false" aria-controls="exp-emploive" title="Show description">
-                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
-                </button>
-              </div>
-              <div id="exp-emploive" class="item-desc" aria-hidden="true">
-                <div class="item-desc-inner">
-                  <p>Founded a full-stack platform that scrapes 3,000+ company career pages every five minutes and alerts users to new job postings through custom filters. Emploive has found 2,000,000+ jobs, sent 225,000+ emails, and reached 1,000+ active users.</p>
-                  <p class="tech-line"><em>TypeScript, Python, React, TanStack, Docker, PostgreSQL, React Query, tRPC, Effect</em></p>
-                </div>
-              </div>
-            </li>
-          </ul>
-            </div>
-
-            <div class="work-column">
-          <h3 id="projects">Projects</h3>
-          <ul class="list">
-            <li class="item">
-              <div class="item-row">
-                <span><a href="https://github.com/cider-build/Cider" target="_blank"><strong>Cider</strong></a> — MacOS coding sandboxes for agents</span>
-                <button class="toggle" aria-expanded="false" aria-controls="proj-cider" title="Show description">
-                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
-                </button>
-              </div>
-              <div id="proj-cider" class="item-desc" aria-hidden="true">
-                <div class="item-desc-inner">
-                  <p>An open source infrastructure platform for managing and running MacOS virtual desktops as coding sandboxes for agents. Cider lets coding agents run and test native Swift applications, with developer docs and first-class API, CLI, SDK, and GitHub Actions support.</p>
-                  <p class="tech-line"><em>Python, TypeScript, FastAPI, React, TanStack, PostgreSQL, SQLModel, VNC, Uvicorn, Pydantic</em></p>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <div class="item-row">
-                <span><a href="https://github.com/Bardemic/codee" target="_blank"><strong>Codee</strong></a> — Open source asynchronous coding agent</span>
-                <button class="toggle" aria-expanded="false" aria-controls="proj-codee" title="Show description">
-                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
-                </button>
-              </div>
-              <div id="proj-codee" class="item-desc" aria-hidden="true">
-                <div class="item-desc-inner">
-                  <p>An asynchronous LLM coding agent that runs in cloud code sandboxes, integrates with services such as PostHog, Slack, and GitHub for autonomous agent creation, and supports Playwright for browser testing.</p>
-                  <p class="tech-line"><em>TypeScript, React, Redux, Python, Django, Docker, Celery, Redis, PostgreSQL, LangChain</em></p>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <div class="item-row">
-                <span><a href="https://github.com/Bardemic/SketchReact" target="_blank"><strong>Websketch</strong></a> — Turn your sketches into websites.</span>
-                <button class="toggle" aria-expanded="false" aria-controls="proj-websketch" title="Show description">
-                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
-                </button>
-              </div>
-              <div id="proj-websketch" class="item-desc" aria-hidden="true">
-                <div class="item-desc-inner">
-                  <p>Websketch lets users draw a UI on a canvas and uses AI agents to convert the drawing into a website, with another agent for further modifications and API integrations. Built in 24 hours for WildHacks 2025, winning best in category.</p>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <div class="item-row">
-                <span><a href="https://hedji.com/" target="_blank"><strong>Hedji</strong></a> — Beat the prediction market with live data.</span>
-                <button class="toggle" aria-expanded="false" aria-controls="proj-hedji" title="Show description">
-                  <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.7 9.3a1 1 0 0 1 1.4 0L12 13.17l3.9-3.88a1 1 0 1 1 1.4 1.42l-4.6 4.58a1 1 0 0 1-1.4 0L6.7 10.7a1 1 0 0 1 0-1.4z"/></svg>
-                </button>
-              </div>
-              <div id="proj-hedji" class="item-desc" aria-hidden="true">
-                <div class="item-desc-inner">
-                  <p>Hedji compiles different live data sources such as tweets and live streams, then automatically places bets when certain conditions are met.</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-            </div>
-          </div>
-        </div>
+      <section aria-labelledby="projects">
+        <h2 id="projects">Selected projects</h2>
+        <ul class="project-list">
+          <li><a class="row" href="https://emploive.com/">
+            <span class="name">Emploive</span>
+            <span class="description">Job alerts</span>
+            <svg class="external-arrow arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10" /></svg>
+          </a></li>
+          <li><a class="row" href="https://github.com/cider-build/Cider">
+            <span class="name">Cider</span>
+            <span class="description">macOS sandboxes for agents</span>
+            <svg class="external-arrow arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10" /></svg>
+          </a></li>
+          <li><a class="row" href="https://github.com/Bardemic/codee">
+            <span class="name">Codee</span>
+            <span class="description">Asynchronous coding agent</span>
+            <svg class="external-arrow arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10" /></svg>
+          </a></li>
+        </ul>
       </section>
+
+      <footer>Software Engineering at Iowa State.</footer>
     </main>
-
-    <script>
-      (function() {
-        const toggles = document.querySelectorAll('.toggle');
-        const togglePanel = (btn) => {
-          const panel = document.getElementById(btn.getAttribute('aria-controls'));
-          const expanded = btn.getAttribute('aria-expanded') === 'true';
-          const startHeight = panel.getBoundingClientRect().height;
-          const startOpacity = Number(getComputedStyle(panel).opacity);
-          const chevron = btn.querySelector('.chevron');
-
-          panel.getAnimations().forEach((animation) => animation.cancel());
-          chevron.getAnimations().forEach((animation) => animation.cancel());
-          btn.setAttribute('aria-expanded', String(!expanded));
-          panel.setAttribute('aria-hidden', String(expanded));
-          chevron.animate(
-            expanded
-              ? [{ transform: 'rotate(180deg)' }, { transform: 'rotate(0deg)' }]
-              : [{ transform: 'rotate(0deg)' }, { transform: 'rotate(180deg)' }],
-            { duration: 380, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
-          );
-
-          if (expanded) {
-            panel.style.height = `${startHeight}px`;
-            const animation = panel.animate(
-              [
-                { height: `${startHeight}px`, opacity: startOpacity },
-                { height: '0px', opacity: 0 }
-              ],
-              { duration: 380, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
-            );
-            animation.onfinish = () => {
-              panel.style.height = '0px';
-              panel.style.opacity = '0';
-            };
-          } else {
-            const endHeight = panel.scrollHeight;
-            panel.style.height = `${startHeight}px`;
-            const animation = panel.animate(
-              [
-                { height: `${startHeight}px`, opacity: startOpacity },
-                { height: `${endHeight}px`, opacity: 1 }
-              ],
-              { duration: 380, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
-            );
-            animation.onfinish = () => {
-              panel.style.height = 'auto';
-              panel.style.opacity = '1';
-            };
-          }
-        };
-
-        toggles.forEach((btn) => {
-          const row = btn.closest('.item-row');
-          btn.addEventListener('click', () => togglePanel(btn));
-          row.addEventListener('click', (event) => {
-            if (event.target.closest('a, button')) return;
-            togglePanel(btn);
-          });
-        });
-
-        const emailCopy = document.getElementById('email-copy');
-        let emailResetTimer;
-        emailCopy.addEventListener('click', async () => {
-          await navigator.clipboard.writeText('brandonpieczka@gmail.com');
-          window.clearTimeout(emailResetTimer);
-          emailCopy.textContent = 'Copied to clipboard ✓';
-          emailCopy.disabled = true;
-          emailCopy.classList.add('is-copied');
-          emailCopy.animate(
-            [{ opacity: 0 }, { opacity: 1 }],
-            { duration: 180, easing: 'ease-out' }
-          );
-          emailResetTimer = window.setTimeout(() => {
-            const copiedOut = emailCopy.animate(
-              [{ opacity: 1 }, { opacity: 0 }],
-              { duration: 160, easing: 'ease-in' }
-            );
-            copiedOut.onfinish = () => {
-              emailCopy.textContent = 'Email';
-              emailCopy.disabled = false;
-              emailCopy.classList.remove('is-copied');
-            };
-          }, 2000);
-        });
-
-      })();
-    </script>
   </body>
 </html>
