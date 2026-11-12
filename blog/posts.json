@@ -1,0 +1,10 @@
+{
+  "posts": [
+    {
+      "slug": "starting-fresh",
+      "title": "Starting fresh: a simple portfolio + blog",
+      "description": "Why I rebuilt this site in plain HTML/CSS and how it’s structured.",
+      "date": "2025-08-01"
+    }
+  ]
+}

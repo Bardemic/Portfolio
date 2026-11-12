@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Brandon Pieczka</title>
+    <link>https://bardemic.com/blog/</link>
+    <description>Writing by Brandon Pieczka.</description>
+    <item>
+      <title>Starting fresh: a simple portfolio + blog</title>
+      <link>https://bardemic.com/blog/starting-fresh/</link>
+      <guid>https://bardemic.com/blog/starting-fresh/</guid>
+      <pubDate>Fri, 01 Aug 2025 12:00:00 GMT</pubDate>
+      <description>Why I rebuilt this site in plain HTML/CSS and how it’s structured.</description>
+    </item>
+  </channel>
+</rss>

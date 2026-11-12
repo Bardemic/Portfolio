@@ -1,0 +1,20 @@
+{
+  "name": "blog-editor",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun build src/main.js --outfile app.js --minify --target browser",
+    "dev": "bun build src/main.js --outfile app.js --target browser --watch",
+    "render-blog": "bun scripts/render-blog.js"
+  },
+  "dependencies": {
+    "@tiptap/core": "3.33.1",
+    "@tiptap/extension-bubble-menu": "3.33.1",
+    "@tiptap/extension-floating-menu": "3.33.1",
+    "@tiptap/extension-image": "3.33.1",
+    "@tiptap/extension-youtube": "3.33.1",
+    "@tiptap/extensions": "3.33.1",
+    "@tiptap/pm": "3.33.1",
+    "@tiptap/starter-kit": "3.33.1"
+  }
+}
