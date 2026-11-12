@@ -311,6 +311,8 @@ ui.slug.addEventListener("blur", () => {
   if (current.slugEdited) ui.slug.value = current.slug;
 });
 
+window.addEventListener("resize", () => fitTitle());
+
 function fitTitle() {
   ui.title.style.height = "auto";
   ui.title.style.height = `${ui.title.scrollHeight}px`;
