@@ -5,6 +5,7 @@ import Youtube from "@tiptap/extension-youtube";
 import BubbleMenu from "@tiptap/extension-bubble-menu";
 import FloatingMenu from "@tiptap/extension-floating-menu";
 import { Placeholder } from "@tiptap/extensions";
+import { NodeSelection } from "@tiptap/pm/state";
 import { GitHub } from "./github.js";
 import { drafts, settings } from "./store.js";
 import { prepareImage, prepareVideo, dataUrlToFile } from "./media.js";
@@ -197,12 +198,23 @@ async function insertFiles(files, position) {
       const node = { type: isVideo ? "video" : "image", attrs: { src } };
       const chain = editor.chain().focus();
       (position == null ? chain.insertContent(node) : chain.insertContentAt(position, node)).run();
+      placeCursorAfterMedia();
       position = null;
       toast(isVideo ? "Video added" : "Image added");
     } catch (error) {
       toast(error.message, true);
     }
   }
+}
+
+// A fresh insert leaves the media node selected, so the next keystroke
+// would replace it. Move the cursor into a paragraph below it instead.
+function placeCursorAfterMedia() {
+  const { selection, doc } = editor.state;
+  if (!(selection instanceof NodeSelection)) return;
+  const after = selection.to;
+  if (doc.resolve(after).nodeAfter?.isTextblock) editor.commands.setTextSelection(after + 1);
+  else editor.chain().insertContentAt(after, { type: "paragraph" }).setTextSelection(after + 1).run();
 }
 
 for (const picker of [ui.pickImage, ui.pickVideo]) {
@@ -431,10 +443,14 @@ async function siteFiles(gh, posts) {
   ];
 }
 
-// Swaps embedded data URLs for uploaded files under public/blog/<slug>/.
+// Drops blank paragraphs and swaps embedded data URLs for uploaded files
+// under public/blog/<slug>/.
 async function extractMedia(html, slug) {
   const doc = new DOMParser().parseFromString(`<body>${html}</body>`, "text/html");
   const uploads = new Map();
+  for (const paragraph of doc.querySelectorAll("p")) {
+    if (!paragraph.textContent.trim() && !paragraph.querySelector("img, video, iframe")) paragraph.remove();
+  }
   for (const element of doc.querySelectorAll('img[src^="data:"], video[src^="data:"]')) {
     const { base64, name } = await dataUrlToFile(element.getAttribute("src"));
     const path = `public/blog/${slug}/${name}`;
