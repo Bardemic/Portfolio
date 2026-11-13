@@ -1,31 +1,23 @@
-# Portfolio
+# Portfolio (Static HTML + CSS)
 
-A fast portfolio and blog built with plain HTML and CSS. The site has no build step. The editor bundle is the only built file.
+This repository contains a simple, fast portfolio and blog built with plain HTML and CSS. No build step required.
 
 ## Structure
 
-- `index.html`: the homepage. The "Writing" section between the `blog:start` and `blog:end` markers is generated.
-- `styles/index.css`: shared styles. `styles/blog.css` adds the blog and post styles.
-- `blog/`: the generated blog. `posts.json` is the post list, `<slug>/index.html` is each post, and `feed.xml` is the RSS feed.
-- `public/`: images and icons. Post media goes in `public/blog/<slug>/`.
-- `editor/`: the blog editor at `/editor/`.
+- `index.html`: main landing page
+- `styles/main.css`: shared styles
+- `public/`: images and icons
+- `blog/index.html`: blog home
+- `blog/<post>.html`: individual posts
 
-## Write a post
+## Development
 
-1. Open [bardemic.com/editor/](https://bardemic.com/editor/).
-2. To connect the editor once, click **Settings** and paste a fine-grained GitHub token. Give the token access to only this repo, with **Contents: Read and write** permission.
-3. Write the post. Select text to format it. To add an image or video, drag it in, paste it, or click **+** on an empty line.
-4. Click **Publish**.
+Open `index.html` directly in a browser or serve the folder with any static server (e.g. VS Code Live Server).
 
-The editor makes one commit to `main`. The commit adds the post page, uploads the media, and rebuilds the blog index, feed, and homepage list. The site deploys in about a minute. Drafts save in your browser until you publish them.
+## Add a blog post
 
-## Change the editor or templates
+1. Duplicate `blog/sample-post.html` and rename it (e.g. `blog/my-post.html`).
+2. Edit the new file’s `<title>`, `<h1>`, date, and content.
+3. Add a new entry to `blog/index.html` inside the `.post-list` linking to your new file.
 
-```sh
-cd editor
-bun install
-bun run build        # rebuilds editor/app.js
-bun run render-blog  # re-renders every blog page after template changes
-```
-
-Templates are in `editor/src/templates.js`. The editor and `render-blog` share them.
+That’s it.
